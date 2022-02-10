@@ -1,0 +1,91 @@
+# Creating SQL Chains
+
+RasgoQL's primary purpose is to create complex SQL statements (chains of data transformations) using a python friendly syntax.
+
+Creating a SQL Chain is a 3 step process:
+
+1. Set a table or view in your DataWarehouse as the target "Dataset"
+2. Apply 1 or more transforms to the Dataset
+3. Print the SQL or save it as a view in your DataWarehouse
+
+#### Example: Simple SQL Chain
+
+Step 1:
+
+Assumes an open RQL connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
+
+```
+ds = rql.dataset('DATABASE.SCHEMA.TABLE')
+ds
+```
+
+Step 2:
+
+```
+chn = ds.rolling_agg(
+    aggregations={
+        'SALESAMOUNT':['MAX', 'MIN', 'SUM']
+    },
+    order_by='ORDERDATE',
+    offsets=[-7, 7],
+    group_by=['PRODUCTKEY'],
+)
+```
+
+Step 3:
+
+```
+# Print the SQL
+chn.sql()
+
+# Save the SQL as a view
+chn.save(table_name='MY_RQL_TEST')
+```
+
+
+
+#### Example: Multi-Transform SQL Chain
+
+Step 1:
+
+Assumes an open RQL connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
+
+```
+ds = rql.dataset('DATABASE.SCHEMA.TABLE')
+ds
+```
+
+Step 2:
+
+```
+chn = ds.rolling_agg(
+    aggregations={
+        'SALESAMOUNT':['MAX', 'MIN', 'SUM']
+    },
+    order_by='ORDERDATE',
+    offsets=[-7, 7],
+    group_by=['PRODUCTKEY'],
+)
+
+chn = chn.drop_columns(
+    exclude_cols=['ORDERDATEKEY']
+)
+
+chn = chn.pivot(
+    dimensions=['ORDERDATE'],
+    pivot_column='SALESAMOUNT',
+    value_column='PRODUCTKEY',
+    agg_method='SUM',
+    list_of_vals=['310', '345']
+)
+```
+
+Step 3:
+
+```
+# Print the SQL
+chn.sql()
+
+# Save the SQL as a view
+chn.save(table_name='MY_RQL_TEST')
+```
