@@ -15,7 +15,6 @@
 * [DataWarehouses](datawarehouses/README.md)
   * [Supported DataWarehouses](datawarehouses/supported-datawarehouses.md)
   * [Credentials](datawarehouses/credentials.md)
-* [Rasgo Transforms](rasgo-transforms.md)
 * [Function Library](function-library/README.md)
   * [RasgoQL class](function-library/rasgoql-class/README.md)
     * [.dataset()](function-library/rasgoql-class/.dataset.md)
