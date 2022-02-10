@@ -1,4 +1,4 @@
-# Getting Started
+# 🏋 Getting Started
 
 From your CLI or jupyter notebook, install the package from pypi:
 

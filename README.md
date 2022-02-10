@@ -1,4 +1,4 @@
-# RasgoQL Docs
+# 💡 What is RasgoQL?
 
 ![](<.gitbook/assets/image (20).png>)
 

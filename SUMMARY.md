@@ -1,7 +1,7 @@
 # Table of contents
 
-* [RasgoQL Docs](README.md)
-* [Getting Started](getting-started.md)
+* [💡 What is RasgoQL?](README.md)
+* [🏋 Getting Started](getting-started.md)
 * [Workflows](workflows/README.md)
   * [Connecting to a DataWarehouse](workflows/connecting-to-a-datawarehouse.md)
   * [Creating SQL Chains](workflows/creating-sql-chains.md)
@@ -26,12 +26,6 @@
 
 ## Transforms
 
-* [Overview](transforms/overview/README.md)
-  * [Build your Own Transform](transforms/overview/user-defined-transforms/README.md)
-    * [Argument Types](transforms/overview/user-defined-transforms/argument-types.md)
-    * [Make your own Transform](transforms/overview/user-defined-transforms/make-your-own-transform.md)
-    * [Utilities](transforms/overview/user-defined-transforms/utilities/README.md)
-      * [cleanse\_name()](transforms/overview/user-defined-transforms/utilities/cleanse\_name.md)
 * [Column Transforms](transforms/column-transforms/README.md)
   * [Bin](transforms/column-transforms/bin.md)
   * [Cast](transforms/column-transforms/cast.md)
