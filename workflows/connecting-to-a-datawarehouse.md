@@ -70,4 +70,4 @@ creds = rasgoql.SnowflakeCredentials.from_env(file_path='./.')
 rql = rasgoql.connect(creds)
 ```
 
-More details on connecting to your Data Warehouse can be found on the [Credentials](../datawarehouses/credentials.md) page.&#x20;
+More details on connecting to your Data Warehouse can be found on the [Data Warehouses](../datawarehouses/) page.&#x20;
