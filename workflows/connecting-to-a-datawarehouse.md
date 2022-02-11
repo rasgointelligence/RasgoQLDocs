@@ -10,9 +10,7 @@ For this reason, RasgoQL will need to establish a connection to your DataWarehou
 
 ### Creating Credentials
 
-Each DataWarehouse (DW) requires a unique set of credentials to connect. RasgoQL provides helper classes to define the credentials needed for your specific DW.
-
-These can be accessed via the main class:
+Each DataWarehouse (DW) requires a unique set of credentials to connect. RasgoQL provides helper classes to define the credentials needed for your specific DW:
 
 ```python
 # Snowflake
@@ -65,9 +63,11 @@ Export them to a file using the \`.to\_env()\` method:
 creds.to_env(file_path='./.')
 ```
 
-In future runs, load the credentials from your .env file without re-typing them, then Connect to RasgoQL:
+In future sessions, load the credentials from your .env file without re-typing them, then Connect to RasgoQL:
 
 ```
 creds = rasgoql.SnowflakeCredentials.from_env(file_path='./.')
 rql = rasgoql.connect(creds)
 ```
+
+More details on connecting to your Data Warehouse can be found on the [Credentials](../datawarehouses/credentials.md) page.&#x20;
