@@ -29,7 +29,7 @@ creds = rasgoql.SnowflakeCredentials(
 )
 
 # Connect to your Data Warehouse
-rql = rasgoql.connect(creds)import rasgoql
+rql = rasgoql.connect(creds)
 ```
 {% endtab %}
 
