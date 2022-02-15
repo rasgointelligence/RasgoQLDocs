@@ -81,7 +81,7 @@ ds1.preview()
 ```
 
 {% hint style="info" %}
-Using a RasgoQL transform chain, you can continue stacking new transforms in sequence until you're at a good point to save the whole chain of SQL to your DW.
+For a full list of available transforms, check out the [Column](transforms/column-transforms/), [Row](transforms/row-transforms/), and [Table](transforms/table-transforms/) Transform sections of the docs.
 {% endhint %}
 
 ### Extend Your Transform Chain
