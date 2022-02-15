@@ -1,7 +1,7 @@
 # Table of contents
 
 * [💡 What is RasgoQL?](README.md)
-* [🏋 Getting Started](getting-started.md)
+* [🏋 Quick Start](getting-started.md)
 * [Workflows](workflows/README.md)
   * [Connecting to a DataWarehouse](workflows/connecting-to-a-datawarehouse.md)
   * [Creating SQL Chains](workflows/creating-sql-chains.md)
