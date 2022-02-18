@@ -14,6 +14,7 @@
   * [Transform](primitives/transform.md)
 * [Data Warehouses](datawarehouses/README.md)
   * [Snowflake](datawarehouses/credentials.md)
+  * [BigQuery](datawarehouses/bigquery.md)
 * [Function Library](function-library/README.md)
   * [RasgoQL class](function-library/rasgoql-class/README.md)
     * [.dataset()](function-library/rasgoql-class/.dataset.md)

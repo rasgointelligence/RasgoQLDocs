@@ -4,15 +4,17 @@
 
 RasgoQL uses the [`snowflake-python-connector`](https://pypi.org/project/snowflake-connector-python/) package to connect and interact with your Snowflake Data Warehouse.
 
+We prefer this package because it is maintained by Snowflake and (in our experience) consistently outperforms alternatives like `sqlalchemy-snowflake`.
+
 ### Credentials
 
-RasgoQL provides helper classes to define the credentials needed for your specific DW. The snowflake class is named `SnowflakeCredentials` :
+RasgoQL provides helper classes to define the credentials needed for your specific DW. The Snowflake class is named `SnowflakeCredentials` :
 
 ```
 from rasgoql import SnowflakeCredentials
 ```
 
-The SnowflakeCredentials class accepts these parameters (as required by the [python-snowflake-connector](https://docs.snowflake.com/en/user-guide/python-connector-example.html#connecting-using-the-default-authenticator)).
+The `SnowflakeCredentials` class accepts these parameters (as required by the [python-snowflake-connector](https://docs.snowflake.com/en/user-guide/python-connector-example.html#connecting-using-the-default-authenticator)):
 
 | Param     | Notes                                                                                                                                                                                                                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

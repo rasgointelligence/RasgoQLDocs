@@ -42,7 +42,7 @@ import rasgoql
 # Fill in your own data warehouse credentials
 creds = rasgoql.BigQueryCredentials(
     secret_type="service",
-    secret_path="<path to your file>.json",
+    secret_filepath="<path to your file>.json",
     project="...",
     dataset="..."
 )
