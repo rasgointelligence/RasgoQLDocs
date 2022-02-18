@@ -4,11 +4,21 @@
 
 From your CLI or jupyter notebook, install the package from pypi:
 
-```python
-pip install rasgoql[snowflake]
-<or>
-pip install rasgoql[bigquery]
+{% tabs %}
+{% tab title="Snowflake" %}
 ```
+pip install rasgoql[snowflake]
+pip install rasgotransforms --upgrade
+```
+{% endtab %}
+
+{% tab title="BigQuery" %}
+```
+pip install rasgoql[bigquery]
+pip install rasgotransforms --upgrade
+```
+{% endtab %}
+{% endtabs %}
 
 ### Connect to Your Data Warehouse
 
