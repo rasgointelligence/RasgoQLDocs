@@ -5,7 +5,9 @@
 From your CLI or jupyter notebook, install the package from pypi:
 
 ```python
-pip install rasgoql
+pip install rasgoql[snowflake]
+<or>
+pip install rasgoql[bigquery]
 ```
 
 ### Connect to Your Data Warehouse
@@ -34,7 +36,20 @@ rql = rasgoql.connect(creds)
 {% endtab %}
 
 {% tab title="BigQuery" %}
-RasgoQL does not support BigQuery yet but we plan to by the end of Q1, 2022
+```
+import rasgoql
+
+# Fill in your own data warehouse credentials
+creds = rasgoql.BigQueryCredentials(
+    secret_type="service",
+    secret_path="<path to your file>.json",
+    project="...",
+    dataset="..."
+)
+
+# Connect to your Data Warehouse
+rql = rasgoql.connect(creds)
+```
 {% endtab %}
 
 {% tab title="Postgres" %}
