@@ -43,8 +43,8 @@ Here is an example of setting BigQuery credentials and connection to RasgoQL:
 creds = rasgoql.BigQueryCredentials(
     secret_type="service",
     secret_filepath="Users/griff/client_secrets.json",
-    project="MY_DB",
-    dataset="PUBLIC"
+    project="mydb",
+    dataset="public"
 )
 rql = rasgoql.connect(creds)
 ```
