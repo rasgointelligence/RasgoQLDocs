@@ -4,17 +4,27 @@ description: Represents a table or view in the DataWarehouse
 
 # Dataset
 
-The Dataset is the core blah blah ...
+A Dataset represents a table or view in your Data Warehouse. All [SQL chains](sqlchain.md) start with a Dataset.
 
+Datasets can be instantiated in rasgoQL using the following syntax:
 
+```
+# Where fqtn is a fully-qualified table name in your Data Warehouse 
+fqtn = 'adventureworks.public.dimproduct'
+ds = rasgoql.dataset(fqtn)
+```
 
-Properties
+A Dataset has these properties:
 
 <details>
 
 <summary>fqtn</summary>
 
 str: (fully-qualified table name) This is the name of the table in the DataWarehouse
+
+```
+ds.fqtn
+```
 
 </details>
 
@@ -26,6 +36,10 @@ str: SQL object type
 
 Values: \[TABLE, VIEW, UNKNOWN]
 
+```
+ds.table_type
+```
+
 </details>
 
 <details>
@@ -36,15 +50,24 @@ str: State of the table
 
 Values: \['IN DW', 'IN MEMORY', 'UNKNOWN']
 
+```
+ds.table_state
+```
+
 </details>
 
-Methods:
+A Dataset has these methods:
 
 <details>
 
 <summary>preview()</summary>
 
 Returns the top 10 rows into a pandas DataFrame
+
+```
+df = ds.preview()
+df.head()
+```
 
 </details>
 
@@ -54,6 +77,50 @@ Returns the top 10 rows into a pandas DataFrame
 
 Returns the DDL statement to create this table
 
+```
+ds.sql()
+```
+
+</details>
+
+<details>
+
+<summary>transform(name, arguments) *</summary>
+
+Applies a Rasgo transform template and returns a SQLChain.
+
+_<mark style="color:orange;">NOTE: Returns a SQLChain object, not a Dataset.</mark>_
+
+_**\*NOTE: Any transform that can be run via the transform() method is also available as an alias method on the Dataset. See samples below for more details.**_
+
+Params:
+
+**name**: str: transform to apply
+
+**arguments**: dict: transform arguments to apply
+
+Example using .transform()
+
+```
+ds.transform(
+    name='cast',
+    arguments={
+      casts: {
+        'NUM_ONE': 'string'}
+    }
+)
+```
+
+Example using alias .cast()
+
+```
+ds.cast(
+    casts={
+      'NUM_ONE': 'string'}
+    }
+)
+```
+
 </details>
 
 <details>
@@ -61,6 +128,11 @@ Returns the DDL statement to create this table
 <summary>to_df()</summary>
 
 Returns the entire table into a pandas DataFrame
+
+```
+df = ds.to_df()
+df.head()
+```
 
 </details>
 

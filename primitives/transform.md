@@ -1,5 +1,5 @@
 ---
-description: Represents a RasgoQL Transform applied to a SQL Chain
+description: Represents a sql script applied to a table or view in your Data Warehouse
 ---
 
 # Transform

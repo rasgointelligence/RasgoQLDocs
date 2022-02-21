@@ -4,7 +4,7 @@ description: Represents a RasgoQL Transform Template
 
 # TransformTemplate
 
-The TransformTemplate is the blah blah ...
+The TransformTemplate represents a RasgoQL transform, which is a generic sql script that can be applied to any table or view in your Data Warehouse.
 
 
 
