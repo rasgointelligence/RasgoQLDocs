@@ -1,6 +1,6 @@
 # Handling Credentials
 
-We created RasgoQL as a tool to simplify workflows for Data Analyst, Engineer and Scientist. In doing so, we set our sights on one of the peskier parts of working in python: storing secret credentials. This page will give our perspective on best practices and demonstrate how to use RasgoQL to adhere to them.
+We created RasgoQL as a tool to simplify workflows for Data Analysts, Engineers and Scientists. In doing so, we set our sights on one of the peskier parts of working in python: storing secret credentials. This page will give our perspective on best practices and demonstrate how to use RasgoQL to adhere to them.
 
 If the first cell in your notebook always looks like this, please read on!
 
@@ -16,9 +16,9 @@ rql = rasgoql.connect(creds)
 
 #### Dynamic Credentials
 
-Dynamic credentials refers to defining your secret cred values on the fly in your notebook. The example above shows how to use dynamic credentials.
+Dynamic credentials refers to defining your secret values on the fly in your notebook. The example above shows how to use dynamic credentials.
 
-RasgoQL supports connecting with dynamic credentials for fast local development and easy onboarding.
+RasgoQL supports connecting with dynamic credentials for fast local development and easy on-boarding.
 
 After connecting for the first time, it is a much better idea to store your credentials in a private .env or yaml file and reference it for all future connections.
 
@@ -48,11 +48,11 @@ rasgoql.SnowflakeCredentials(
 ).to_env(filepath)
 ```
 
-This will look for a file named .env at the filepath you passed in. If no .env file  is found, it will create one and write your RasgoQL credential values to it. If a .env file already exists at that location, it will update only the RasgoQL credential values (and add any missing values) to the new values passed in.
+This will look for a file named .env at the filepath you provided. If no .env file is found, it will create one and write your RasgoQL credential values to it. If a .env file already exists at that location, it will update only the RasgoQL credential values (and add any missing values).
 
 #### Connecting using .env
 
-After RasgoQL credentials exist in your .env file, you can connect using the method, which is much more secure for shared notebooks:
+After RasgoQL credentials exist in your .env file, you can connect using the method below, which is much more secure for shared notebooks:
 
 ```
 creds = rasgoql.SnowflakeCredentials.from_env()
