@@ -8,14 +8,14 @@ One benefit of using RasgoQL is having an ever-expanding library of transforms a
 
 To quickly list all available transforms, run:
 
-```
+```python
 transforms = rql.list_transforms()
 print(transforms)
 ```
 
 output:
 
-```
+```python
 [RasgoTemplate: one_hot_encode(column: column),
  RasgoTemplate: datetrunc(dates: datepart_dict),
  RasgoTemplate: datepart(dates: datepart_dict),
@@ -28,7 +28,7 @@ output:
 
 This function returns a list of TransformTemplate objects.
 
-```
+```python
 for t in transforms:
     print(t.define())
 ```
@@ -60,7 +60,7 @@ FROM {{ source_table }}
 
 To learn more about a specific transform, run:
 
-```
+```python
 rql.define_transforms(name="impute")
 ```
 

@@ -6,7 +6,7 @@ This transform generates a date spine for your date index, which can replace you
 
 All intervals are considered to be start-inclusive and end-exclusive, or `(start, end]`. The join with the date spine will be an outer join such that all intervals are present and all data that does not fall into one of those intervals is excluded. It's essentially:
 
-```
+```python
 SELECT user_table.*, intervals.*
 FROM intervals
   LEFT JOIN user_table

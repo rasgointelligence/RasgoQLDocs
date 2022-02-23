@@ -10,14 +10,14 @@ A SQLChain represents a sequence of sql statements applied to a table or view in
 
 SQLChains can be instantiated in rasgoQL using either of the following ways:
 
-```
+```python
 # Where fqtn is a fully-qualified table name in your Data Warehouse 
 fqtn = 'adventureworks.public.dimproduct'
 ds = rasgoql.dataset(fqtn)
 sql_chn = ds.transform(...)
 ```
 
-```
+```python
 # Where fqtn is a fully-qualified table name in your Data Warehouse 
 fqtn = 'adventureworks.public.dimproduct'
 sql_chn = rasgoql.sqlchain(fqtn).transform(...)
@@ -31,7 +31,7 @@ A SQLChain has these properties:
 
 Dataset: The original table or view this chain applies its queries to
 
-```
+```python
 sql_chn.entry_table
 ```
 
@@ -45,7 +45,7 @@ str: (fully-qualified table name) The name of the table or view this chain will 
 
 _<mark style="color:orange;">NOTE: This property will be mutable until the chain is saved</mark>_
 
-```
+```python
 sql_chn.entry_table
 ```
 
@@ -59,7 +59,7 @@ Dataset: The Dataset object this chain will produce if saved in current state
 
 _<mark style="color:orange;">NOTE: This property will be mutable until the chain is saved</mark>_
 
-```
+```python
 sql_chn.output_table
 ```
 
@@ -71,7 +71,7 @@ sql_chn.output_table
 
 list of Transforms: An ordered list of transforms applied to the entry\_table
 
-```
+```python
 sql_chn.transforms
 ```
 
@@ -85,7 +85,7 @@ A SQLChain has these methods:
 
 Returns the top 10 rows into a pandas DataFrame
 
-```
+```python
 df = sql_chn.preview()
 df.head()
 ```
@@ -98,7 +98,7 @@ df.head()
 
 Returns the SQL statement to create this chain
 
-```
+```python
 sql_chn.sql()code
 ```
 
@@ -116,7 +116,7 @@ Params:
 
 **table\_type**: str: TABLE or VIEW&#x20;
 
-```
+```python
 sql_chn.save(
     table_name=, 
     table_type='view'
@@ -141,7 +141,7 @@ Params:
 
 **materialize\_method**: str: Optional value: TABLE or VIEW . Defaults to VIEW
 
-```
+```python
 sql_chn.to_dbt(
     project_directory='Users/me/dbt',
     project_name='helloworld'
@@ -168,7 +168,7 @@ Params:
 
 Example using .transform()
 
-```
+```python
 sql_chn.transform(
     name='cast',
     arguments={
@@ -180,7 +180,7 @@ sql_chn.transform(
 
 Example using alias .cast()
 
-```
+```python
 sql_chn.cast(
     casts={
       'NUM_ONE': 'string'}

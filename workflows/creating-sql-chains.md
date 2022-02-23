@@ -14,14 +14,14 @@ Step 1:
 
 Assumes an open rasgoql connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
 
-```
+```python
 ds = rql.dataset('DATABASE.SCHEMA.TABLE')
 ds
 ```
 
 Step 2:
 
-```
+```python
 chn = ds.rolling_agg(
     aggregations={
         'SALESAMOUNT':['MAX', 'MIN', 'SUM']
@@ -34,7 +34,7 @@ chn = ds.rolling_agg(
 
 Step 3:
 
-```
+```python
 # Print the SQL
 chn.sql()
 
@@ -50,14 +50,14 @@ Step 1:
 
 Assumes an open rasgoql connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
 
-```
+```python
 ds = rql.dataset('DATABASE.SCHEMA.TABLE')
 ds
 ```
 
 Step 2:
 
-```
+```python
 chn = ds.rolling_agg(
     aggregations={
         'SALESAMOUNT':['MAX', 'MIN', 'SUM']
@@ -82,7 +82,7 @@ chn = chn.pivot(
 
 Step 3:
 
-```
+```python
 # Print the SQL
 chn.sql()
 

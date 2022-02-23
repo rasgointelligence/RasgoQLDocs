@@ -14,13 +14,13 @@ Each DataWarehouse (DW) requires a unique set of credentials to connect. RasgoQL
 
 {% tabs %}
 {% tab title="Snowflake" %}
-```
+```python
 rasgoql.SnowflakeCredentials()
 ```
 {% endtab %}
 
 {% tab title="BigQuery" %}
-```
+```python
 rasgoql.BigQueryCredentials()
 ```
 {% endtab %}
@@ -46,7 +46,7 @@ creds = rasgoql.SnowflakeCredentials(
 
 Then, pass the credentials into the RasgoQL connect() method:
 
-```
+```python
 rql = rasgoql.connect(creds)
 ```
 
@@ -56,7 +56,7 @@ To save your credentials to a .env file, populate the helper class with required
 
 {% tabs %}
 {% tab title="Snowflake" %}
-```
+```python
 creds = rasgoql.SnowflakeCredentials(
   account='',
   user='',
@@ -70,7 +70,7 @@ creds = rasgoql.SnowflakeCredentials(
 {% endtab %}
 
 {% tab title="BigQuery" %}
-```
+```python
 creds = rasgoql.BigQueryCredentials(
   secret_type='',
   secret_filepath='',
@@ -83,13 +83,13 @@ creds = rasgoql.BigQueryCredentials(
 
 Export them to a file using the \`.to\_env()\` method:
 
-```
+```python
 creds.to_env(filepath='/.')
 ```
 
 In future sessions, load the credentials from your .env file without re-typing them, then Connect to RasgoQL:
 
-```
+```python
 creds = rasgoql.SnowflakeCredentials.from_env(filepath='./.')
 rql = rasgoql.connect(creds)
 ```

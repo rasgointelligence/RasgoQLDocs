@@ -4,7 +4,7 @@ We created RasgoQL as a tool to simplify workflows for Data Analysts, Engineers 
 
 If the first cell in your notebook always looks like this, please read on!
 
-```
+```python
 import rasgoql
 
 creds = rasgoql.SnowflakeCredentials(
@@ -32,7 +32,7 @@ The alternative to setting credentials dynamically is saving them to a .env file
 
 A .env file is stored on your local machine and holds environment variables that can be set on your os and used by any application with access to your os. Here is an example file:
 
-```
+```python
 AWS_ACCESS_KEY_ID="..."
 AWS_SECRET_ACCESS_KEY="..."
 AWS_DEFAULT_REGION=us-west-2""
@@ -40,7 +40,7 @@ AWS_DEFAULT_REGION=us-west-2""
 
 To save you RasgoQL credentials to an .env file, run:
 
-```
+```python
 filepath = 'Users/griff/code'
 rasgoql.SnowflakeCredentials(
     user=griff,
@@ -54,7 +54,7 @@ This will look for a file named .env at the filepath you provided. If no .env fi
 
 After RasgoQL credentials exist in your .env file, you can connect using the method below, which is much more secure for shared notebooks:
 
-```
+```python
 creds = rasgoql.SnowflakeCredentials.from_env()
 rql = rasgoql.connect(creds)
 ```

@@ -8,7 +8,7 @@ A Dataset represents a table or view in your Data Warehouse. All [SQL chains](sq
 
 Datasets can be instantiated in rasgoQL using the following syntax:
 
-```
+```python
 # Where fqtn is a fully-qualified table name in your Data Warehouse 
 fqtn = 'adventureworks.public.dimproduct'
 ds = rasgoql.dataset(fqtn)
@@ -22,7 +22,7 @@ A Dataset has these properties:
 
 str: (fully-qualified table name) This is the name of the table in the DataWarehouse
 
-```
+```python
 ds.fqtn
 ```
 
@@ -36,7 +36,7 @@ str: SQL object type
 
 Values: \[TABLE, VIEW, UNKNOWN]
 
-```
+```python
 ds.table_type
 ```
 
@@ -50,7 +50,7 @@ str: State of the table
 
 Values: \['IN DW', 'IN MEMORY', 'UNKNOWN']
 
-```
+```python
 ds.table_state
 ```
 
@@ -64,7 +64,7 @@ A Dataset has these methods:
 
 Returns the top 10 rows into a pandas DataFrame
 
-```
+```python
 df = ds.preview()
 df.head()
 ```
@@ -77,7 +77,7 @@ df.head()
 
 Returns the DDL statement to create this table
 
-```
+```python
 ds.sql()
 ```
 
@@ -101,7 +101,7 @@ Params:
 
 Example using .transform()
 
-```
+```python
 ds.transform(
     name='cast',
     arguments={
@@ -113,7 +113,7 @@ ds.transform(
 
 Example using alias .cast()
 
-```
+```python
 ds.cast(
     casts={
       'NUM_ONE': 'string'}
@@ -129,7 +129,7 @@ ds.cast(
 
 Returns the entire table into a pandas DataFrame
 
-```
+```python
 df = ds.to_df()
 df.head()
 ```

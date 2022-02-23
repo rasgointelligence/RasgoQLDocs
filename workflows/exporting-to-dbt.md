@@ -8,7 +8,7 @@ RasgoQL allows you to export any SQLChain as a dbt model file.
 
 To create the file, run .to\_dbt() from a SQLChain.
 
-```
+```python
 chn.to_dbt(project_directory='users/me/dbt/')
 ```
 

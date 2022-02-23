@@ -10,7 +10,7 @@ We prefer this package because it is maintained by Snowflake and (in our experie
 
 RasgoQL provides helper classes to define the credentials needed for your specific DW. The Snowflake class is named `SnowflakeCredentials` :
 
-```
+```python
 from rasgoql import SnowflakeCredentials
 ```
 
@@ -38,7 +38,7 @@ RasgoQL relies on the access granted to the `role` you connect with. It does not
 
 Here is an example of setting Snowflake credentials and connection to RasgoQL:
 
-```
+```python
 creds = rasgoql.SnowflakeCredentials(
     account="abc123.us-east-1",
     user="GRIFF",

@@ -12,28 +12,28 @@ All query methods assume you have an open connection to your DataWarehouse. See 
 
 You may issue any valid SQL query using the .query() method:
 
-```
+```python
 sql = 'SELECT TOP 10000 * FROM MY_TABLE'
 rql.query(sql)
 ```
 
 RasgoQL makes an underwhelming attempt to detect SQL keywords that could be dangerous or unintended. If you pass one in, you will see this message:
 
-```
+```python
 sql = 'DROP TABLE MY_TABLE'
 rql.query(sql)
 
-###
+"""
 SQLException: It looks like your SQL statement contains a 
 potentially dangerous or data-altering operation. 
 If you are positive you want to run this, 
 pass in acknowledge_risk=True and run this function again.
-###
+"""
 ```
 
 If you are confident in your SQL, you can override this message by passing in the \`acknowledge\_risk\` parameter to ignore this warning:
 
-```
+```python
 sql = 'DROP TABLE MY_TABLE'
 rql.query(sql, acknowledge_risk=True)
 ```
@@ -42,7 +42,7 @@ rql.query(sql, acknowledge_risk=True)
 
 You may return results of a valid SQL query into a pandas DataFrame using the .query\_into\_df() method:
 
-```
+```python
 sql = 'SELECT TOP 10000 * FROM MY_TABLE'
 df = rql.query_into_df(sql)
 df.head()
@@ -52,6 +52,6 @@ df.head()
 
 You may return a list of accessible tables and views in your DataWarehouse using the .list\_tables() method:&#x20;
 
-```
+```pyton
 rql.list_tables()
 ```

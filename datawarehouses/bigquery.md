@@ -12,7 +12,7 @@ We prefer this package because it is maintained by Google and (in our experience
 
 RasgoQL provides helper classes to define the credentials needed for your specific DW. The BQ class is named `BigQueryCredentials` :
 
-```
+```python
 from rasgoql import BigQueryCredentials
 ```
 
@@ -39,7 +39,7 @@ RasgoQL relies on the access granted to the user/service account you connect wit
 
 Here is an example of setting BigQuery credentials and connection to RasgoQL:
 
-```
+```python
 creds = rasgoql.BigQueryCredentials(
     secret_type="service",
     secret_filepath="Users/griff/client_secrets.json",
