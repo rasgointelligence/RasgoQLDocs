@@ -81,7 +81,7 @@ Sweet! Let's start generating SQL with RasgoQL
 rql.list_tables()
 ```
 
-### Start a Transform Chain
+### Start a SQL Chain
 
 ```python
 # Pick a table or view as your starting dataset
@@ -109,7 +109,7 @@ ds1.preview()
 For a full list of available transforms, check out the [Column](transforms/column-transforms/), [Row](transforms/row-transforms/), and [Table](transforms/table-transforms/) Transform sections of the docs.
 {% endhint %}
 
-### Extend Your Transform Chain
+### Extend Your SQL Chain
 
 ```python
 ds2 = ds1.apply(sql="""

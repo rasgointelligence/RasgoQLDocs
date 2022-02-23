@@ -1,6 +1,6 @@
 # 💡 What is RasgoQL?
 
-**RasgoQL** is an [open source package](https://github.com/rasgointelligence/RasgoQL) to help you write python, but execute SQL against your data warehouse. Currently, [we only support Snowflake](datawarehouses/), but we are rapidly adding support for other data warehouses.&#x20;
+**RasgoQL** is an [open source package](https://github.com/rasgointelligence/RasgoQL) to help you write python, but execute SQL against your data warehouse. Currently, we only support [Snowflake & BigQuery](datawarehouses/), but we are rapidly adding support for other data warehouses.&#x20;
 
 ![](.gitbook/assets/rasgoql\_visual.png)
 
@@ -16,7 +16,7 @@ We built RasgoQL because we've seen too many data scientists and data analysts w
 
 Awesome, let's get started.
 
-1. Install RasgoQL by running `pip install rasgoql` &#x20;
+1. Install RasgoQL by running `pip install rasgoql[snowflake]` &#x20;
 2. Connect to your data warehouse using[ local credentials](workflows/connecting-to-a-datawarehouse.md)
 3. Start [building some queries](workflows/creating-sql-chains.md) via python
 

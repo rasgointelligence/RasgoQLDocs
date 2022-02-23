@@ -84,13 +84,13 @@ creds = rasgoql.BigQueryCredentials(
 Export them to a file using the \`.to\_env()\` method:
 
 ```
-creds.to_env(file_path='/.')
+creds.to_env(filepath='/.')
 ```
 
 In future sessions, load the credentials from your .env file without re-typing them, then Connect to RasgoQL:
 
 ```
-creds = rasgoql.SnowflakeCredentials.from_env(file_path='./.')
+creds = rasgoql.SnowflakeCredentials.from_env(filepath='./.')
 rql = rasgoql.connect(creds)
 ```
 
