@@ -127,6 +127,31 @@ sql_chn.save(
 
 <details>
 
+<summary>todbt(project_directory, models_directory, project_name, materialize_method)</summary>
+
+Saves this SQLChain as a dbt-compliant model.sql file
+
+Params:
+
+**project\_directory**: str: filepath to save the dbt\_project.yml file
+
+**models\_directory**: str: Optional filepath to save the model.sql file. Defaults to _project\_directory/models_
+
+**project\_name**: str: Optional name for the project. Defaults to 'rasgoql'
+
+**materialize\_method**: str: Optional value: TABLE or VIEW . Defaults to VIEW
+
+```
+sql_chn.to_dbt(
+    project_directory='Users/me/dbt',
+    project_name='helloworld'
+)
+```
+
+</details>
+
+<details>
+
 <summary>transform(name, arguments) *</summary>
 
 Applies a Rasgo transform template and returns a the SQLChain with a new terminal transform.
