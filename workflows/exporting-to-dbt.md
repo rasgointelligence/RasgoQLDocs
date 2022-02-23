@@ -1,6 +1,6 @@
 # Exporting to dbt
 
-One of the primary benefits of rasgoql is the ability to instantly export your SQLChain to a prod-ready dbt model.
+One of the primary benefits of RasgoQL is the ability to instantly export your SQLChain to a prod-ready dbt model.
 
 ### Export SQL as a dbt Model
 

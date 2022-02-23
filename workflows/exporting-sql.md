@@ -1,12 +1,12 @@
 # Exporting SQL
 
-RasgoQL allows users to export the SQL chains they create for use in other tools.
+RasgoQL allows users to export the SQLChains they create for use in other tools.
 
 Popular options are to run the SQL directly in your DataWarehouse or to export workflows to DBT.
 
-### Print SQL as strings
+### Printing SQL as strings
 
-Exporting the SQL you've created in a chain is as simple as running the .sql() method on a SQLchain object. This will print the SQL as a SELECT statement using CTEs.
+Printing the SQL you've created in a chain is as simple as running the .sql() method on a SQLchain object. This will print the SQL as a SELECT statement using CTEs.
 
 ```
 chn.sql()

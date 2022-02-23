@@ -1,6 +1,6 @@
 # Querying the DataWarehouse
 
-RasgoQL provides a helpful framework for building SQL chains and previewing data. There may also be times that you need issue standalone queries against your DataWarehouse. RasgoQL provides a simple way to do this as well.
+RasgoQL provides a helpful framework for building SQLChains and previewing data. There may also be times that you need issue standalone queries against your DataWarehouse. RasgoQL provides a simple way to do this as well.
 
 {% hint style="warning" %}
 WARNING: RasgoQL relies on inherited permissions from your data access policy (and your common sense) when issuing queries against your DataWarehouse. **Please be careful using this feature** to avoid: accessing data you should not access, running dangerous or destructive queries.&#x20;

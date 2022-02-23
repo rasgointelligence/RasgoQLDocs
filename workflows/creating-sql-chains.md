@@ -2,17 +2,17 @@
 
 RasgoQL's primary purpose is to create complex SQL statements (chains of data transformations) using a python friendly syntax.
 
-Creating a SQL Chain is a 3 step process:
+Creating a SQLChain is a 3 step process:
 
 1. Set a table or view in your DataWarehouse as the target "Dataset"
 2. Apply 1 or more transforms to the Dataset
 3. Print the SQL or save it as a view in your DataWarehouse
 
-#### Example: Simple SQL Chain
+#### Example: Simple SQLChain
 
 Step 1:
 
-Assumes an open RQL connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
+Assumes an open rasgoql connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
 
 ```
 ds = rql.dataset('DATABASE.SCHEMA.TABLE')
@@ -44,11 +44,11 @@ chn.save(table_name='MY_RQL_TEST')
 
 
 
-#### Example: Multi-Transform SQL Chain
+#### Example: Multi-Transform SQLChain
 
 Step 1:
 
-Assumes an open RQL connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
+Assumes an open rasgoql connection. See [Connecting to a DataWarehouse](connecting-to-a-datawarehouse.md) for more details.
 
 ```
 ds = rql.dataset('DATABASE.SCHEMA.TABLE')
