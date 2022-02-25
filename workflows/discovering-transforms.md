@@ -43,6 +43,7 @@ For a list of valid dateparts, refer to [Supported Date and Time Parts](https://
 
 Arguments: [{'name': 'dates', 'type': 'datepart_dict', 'description': 'dict where the keys are names of column(s) you want to datetrunc and the values are the desired date grain'}]
 SourceCode: SELECT *,
+
 {% raw %}
 {%- for target_col, date_part in dates.items() %}
   DATE_TRUNC({{target_col}}, {{date_part}}) as {{target_col}}_{{date_part}} {{ ", " if not loop.last else "" }}
@@ -53,6 +54,7 @@ FROM {{ source_table }}
   {%- endfor -%}
 {%- endfor %}
 {% endraw %}
+
 FROM {{ source_table }}
 ```
 
@@ -61,7 +63,7 @@ FROM {{ source_table }}
 To learn more about a specific transform, run:
 
 ```python
-rql.define_transforms(name="impute")
+rql.define_transform(name="impute")
 ```
 
 This will print a long description of the transform, the arguments it accepts, the jinja SQL template it will apply, and an example of how to use it.
@@ -74,6 +76,7 @@ SourceCode: {#
 Jinja Macro to generate a query that would get all 
 the columns in a table by fqtn
 #}
+
 {% raw %}
 {%- macro get_source_col_names(source_table_fqtn) -%}
     select * from {{ source_table_fqtn }} limit 0
@@ -98,12 +101,14 @@ else it will perform that impuattion stagety on column
     {%- endif -%}
 {%- endfor %}
 {% endraw %}
+
+
 FROM {{source_table}}
 ```
 
 #### Exploring Transforms in the GitHub Repo
 
-Rasgo serves our transforms via an open-source python package `rasgotransforms`.&#x20;
+Rasgo serves our transforms via an open-source python package `rasgotransforms`.
 
 The transform source code is available on github: [https://github.com/rasgointelligence/RasgoTransforms](https://github.com/rasgointelligence/RasgoTransforms)
 
@@ -114,4 +119,3 @@ The `rasgotransforms` package is a dependency of `rasgoql`.
 
 Since the `rasgotransforms` package updates so frequently, it is best practice to run `pip install rasgotransforms --upgrade` each time you run rasgoql to ensure you have the most recent additions.
 {% endhint %}
-
