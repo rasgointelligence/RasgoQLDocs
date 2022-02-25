@@ -114,7 +114,7 @@ Params:
 
 **table\_name**: str: name for the SQL object
 
-**table\_type**: str: TABLE or VIEW&#x20;
+**table\_type**: str: TABLE or VIEW
 
 ```python
 sql_chn.save(
@@ -127,7 +127,7 @@ sql_chn.save(
 
 <details>
 
-<summary>todbt(project_directory, models_directory, project_name, materialize_method)</summary>
+<summary>to_dbt(project_directory, models_directory, project_name, materialize_method)</summary>
 
 Saves this SQLChain as a dbt-compliant model.sql file
 
@@ -189,4 +189,3 @@ sql_chn.cast(
 ```
 
 </details>
-
