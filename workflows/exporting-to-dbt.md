@@ -6,35 +6,27 @@ One of the primary benefits of RasgoQL is the ability to instantly export your S
 
 RasgoQL allows you to export any SQLChain as a dbt model file.
 
-To create the file, run .to\_dbt() from a SQLChain.
+To create the file, run `.to_dbt()` from a SQLChain (where `output_directory` is an absolute path to your dbt /models folder).
 
 ```python
-chn.to_dbt(project_directory='users/me/dbt/')
+output_directory = 'Users/me/dbt/models'
+chn.to_dbt(output_directory)
 ```
 
-This will command will:&#x20;
+This will command will:
 
-1. Search for the `project_directory` path on your machine and create it if it does not already exist.
-2. Create a `dbt_project.yml` file in the project directory if it does not already exist. If the file already exists, rasgoql will not overwrite or edit it.
-3. Search for the `models_directory` path on your machine and create it if it does not already exist.
-4. Create a `<model_name>.sql` file in the models directory, where `<model_name>` is the `output_alias` of your SQLChain. If a file with this name already exists in this directory it will be overwritten.
+1. Search for the `output_directory` path on your machine and raise an error if it does not exist.
+2. Create a `<model_name>.sql` file in the directory, where `<model_name>` is the `output_alias` of your SQLChain. If a file with this name already exists in this directory it will be overwritten.
+3. Create a schema.yml file in the directory (if the `include_schema` param is passed as `True`). If a schema.yml file already exists, it will be appended.
 
 **Parameters**
 
-The `.to_dbt()` function requires a `project_directory` parameter. All other parameters are optional.
+The `.to_dbt()` function requires an `output_directory` parameter. All other parameters are optional.
 
-**project\_directory**: str: This should be an absolute filepath on your machine, where you want the dbt\_project.yml file and other top-level folders to be written.
+**output\_directory**: str: This should be an absolute filepath on your machine, where you want the model file to be written.
 
-**model\_directory**: str: Optional - Absolute filepath on your machine, where you want model.sql files to be written. If no value is passed, the path _project\_directory/models_ will be used.
+**file\_name**: str: Optional - Name for the model .sql file. Defaults to `{output_alias}.sql` of SQLChain
 
-**project\_name**: str: Optional - A name for your dbt project. This value should not be passed if you have an existing dbt project and are just printing models to it. It can be passed if you are creating a project from scratch. If no value is passed, the default project name "rasgoql" will be used.
+**include\_schema**: bool: Optional - Instructs whether to include a schema.yml file
 
-Per dbt: _"Project names should contain only lowercase characters and underscores. A good package name should reflect your organization's name or the intended use of these models."_
-
-**materialize\_method**: str: Optional - The dbt materialize method you want to use for this model. _Supported values are: "table" or "view"_
-
-{% hint style="info" %}
-The dbt\_project.yml file that is printed will use default values. You may want to change them before performing `dbt run`.
-
-For example, you will want to swap out the "profile" value of "default" for your actual connection profile.
-{% endhint %}
+**config\_args**: dict: Optional - key value pair of dbt [config values](https://docs.getdbt.com/reference/model-configs) to add to the .sql and/or schema.yml file
