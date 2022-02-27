@@ -34,7 +34,7 @@
 * [Troubleshooting](troubleshooting/README.md)
   * [Connecting to your Data Warehouse](troubleshooting/connecting-to-your-data-warehouse.md)
   * [Applying Transforms](troubleshooting/applying-transforms.md)
-  * [Exporting SQL](troubleshooting/exporting-sql.md)
+  * [Exporting & Saving SQL](troubleshooting/exporting-sql.md)
 
 ## Transforms
 
