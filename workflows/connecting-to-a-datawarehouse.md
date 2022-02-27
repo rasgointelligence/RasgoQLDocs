@@ -50,7 +50,7 @@ Then, pass the credentials into the RasgoQL connect() method:
 rql = rasgoql.connect(creds)
 ```
 
-#### &#x20;Saving Credentials to a File
+#### Saving Credentials to a File
 
 To save your credentials to a .env file, populate the helper class with required parameters:
 
@@ -72,8 +72,7 @@ creds = rasgoql.SnowflakeCredentials(
 {% tab title="BigQuery" %}
 ```python
 creds = rasgoql.BigQueryCredentials(
-  secret_type='',
-  secret_filepath='',
+  json_filepath='',
   project='',
   dataset=''
 )
@@ -94,4 +93,4 @@ creds = rasgoql.SnowflakeCredentials.from_env(filepath='./.')
 rql = rasgoql.connect(creds)
 ```
 
-More details on connecting to your Data Warehouse can be found on the [Data Warehouses](../datawarehouses/) page.&#x20;
+More details on connecting to your Data Warehouse can be found on the [Data Warehouses](../datawarehouses/) page.

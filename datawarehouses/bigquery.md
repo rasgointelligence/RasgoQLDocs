@@ -1,7 +1,5 @@
 # BigQuery
 
-
-
 ### Connection
 
 RasgoQL uses the [`google-cloud-bigquery`](https://pypi.org/project/google-cloud-bigquery/) package to connect and interact with your BigQuery Data Warehouse.
@@ -18,19 +16,16 @@ from rasgoql import BigQueryCredentials
 
 The `BigQueryCredentials` class accepts these parameters:
 
-| Param            | Notes                                                                                                                                  |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| secret\_type     | <p>A string indicating which authentication method you will user: user or service account</p><p>Valid values: ["user" | "service"]</p> |
-| secret\_filepath | absolute path to the google credentials json file on your machine                                                                      |
-| project          | default project to use for this session                                                                                                |
-| dataset          | default dataset to use for this session                                                                                                |
-
-
+| Param          | Notes                                                             |
+| -------------- | ----------------------------------------------------------------- |
+| json\_filepath | absolute path to the google credentials json file on your machine |
+| project        | default project to use for this session                           |
+| dataset        | default dataset to use for this session                           |
 
 {% hint style="info" %}
 All RasgoQL queries will default to the parameter values passed in at connection time.
 
-Advanced SQL users can change the `project` and `dataset` parameters mid-session by manually passing in USE statements.&#x20;
+Advanced SQL users can change the `project` and `dataset` parameters mid-session by manually passing in USE statements.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -41,8 +36,7 @@ Here is an example of setting BigQuery credentials and connection to RasgoQL:
 
 ```python
 creds = rasgoql.BigQueryCredentials(
-    secret_type="service",
-    secret_filepath="Users/griff/client_secrets.json",
+    json_filepath="Users/griff/client_secrets.json",
     project="mydb",
     dataset="public"
 )
