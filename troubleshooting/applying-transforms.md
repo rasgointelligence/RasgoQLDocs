@@ -43,7 +43,7 @@ Steps to troubleshoot:
 
 **DWQueryError**: various
 
-Any error message wrapped in the DWQueryError indicates a SQL syntax error. Read the error message for details on how to troubleshoot.
+Any error message wrapped in the DWQueryError indicates a SQL syntax error. Read the error message for details on how to troubleshoot. Most often, the fix for syntax errors is to change a paramter in one of your transforms that is causing invalid SQL to be rendered. &#x20;
 
 
 
