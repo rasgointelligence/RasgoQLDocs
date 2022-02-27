@@ -27,6 +27,6 @@ The `.to_dbt()` function requires an `output_directory` parameter. All other par
 
 **file\_name**: str: Optional - Name for the model .sql file. Defaults to `{output_alias}.sql` of SQLChain
 
-**include\_schema**: bool: Optional - Instructs whether to include a schema.yml file
+**include\_schema**: bool: Optional - Instructs whether to include a schema.yml file. Defaults to False.
 
 **config\_args**: dict: Optional - key value pair of dbt [config values](https://docs.getdbt.com/reference/model-configs) to add to the .sql and/or schema.yml file

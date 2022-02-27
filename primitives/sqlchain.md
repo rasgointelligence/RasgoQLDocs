@@ -127,24 +127,24 @@ sql_chn.save(
 
 <details>
 
-<summary>to_dbt(project_directory, models_directory, project_name, materialize_method)</summary>
+<summary>to_dbt(<br>output_directory, <br>file_name, <br>include_schema, <br>config_args)</summary>
 
 Saves this SQLChain as a dbt-compliant model.sql file
 
 Params:
 
-**project\_directory**: str: filepath to save the dbt\_project.yml file
+**output\_directory**: str: filepath to save the model files
 
-**models\_directory**: str: Optional filepath to save the model.sql file. Defaults to _project\_directory/models_
+**file\_name** str: Optional - name for the model .sql file. Defaults to _{output\_alias}.sql_ of the SQLChain. __&#x20;
 
-**project\_name**: str: Optional name for the project. Defaults to 'rasgoql'
+**include\_schema**: bool: Instruct whether to profile the model in a schema.yml file. Defaults to False
 
-**materialize\_method**: str: Optional value: TABLE or VIEW . Defaults to VIEW
+**config\_args**: dict: Optional - key value pair of dbt [config values](https://docs.getdbt.com/reference/model-configs) to include in the .sql and/or schema.yml file.
 
 ```python
 sql_chn.to_dbt(
-    project_directory='Users/me/dbt',
-    project_name='helloworld'
+    output_directory='Users/me/dbt',
+    include_schema=True
 )
 ```
 
