@@ -8,7 +8,7 @@ If the first cell in your notebook always looks like this, please read on!
 import rasgoql
 
 creds = rasgoql.SnowflakeCredentials(
-    user=griff,
+    user='griff',
     password='theregoesmydata:('
 )
 rql = rasgoql.connect(creds)
@@ -35,7 +35,7 @@ A .env file is stored on your local machine and holds environment variables that
 ```python
 AWS_ACCESS_KEY_ID="..."
 AWS_SECRET_ACCESS_KEY="..."
-AWS_DEFAULT_REGION=us-west-2""
+AWS_DEFAULT_REGION="us-west-2"
 ```
 
 To save you RasgoQL credentials to an .env file, run:
@@ -43,7 +43,7 @@ To save you RasgoQL credentials to an .env file, run:
 ```python
 filepath = 'Users/griff/code'
 rasgoql.SnowflakeCredentials(
-    user=griff,
+    user='griff',
     password='MUCHsafer!'
 ).to_env(filepath)
 ```
