@@ -15,7 +15,7 @@ Example use case: Aggregate the last 10 sales for a customer regardless of when 
 | ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | aggregations | agg_dict    | Dictionary of columns and aggregate functions to apply. A column can have a list of multiple aggregates applied. One column will be created for each column:aggregate pair.                 |             |
 | order_by     | column_list | Column(s) to order rows by when calculating the agg window                                                                                                                                  |             |
-| offsets      | value_list  | List of numeric values to offset the date column. Negative values apply a look-back window; Positive values apply a look-forward window. One column will be created for each offset value.  |             |
+| offsets      | int_list    | List of numeric values to offset the date column. Positive values apply a look-back window. Negative values apply a look-forward window. One column will be created for each offset value.  |             |
 | group_by     | column_list | Column(s) to group by when calculating the agg window                                                                                                                                       | True        |
 
 
@@ -28,7 +28,7 @@ ds = internet_sales.rolling_agg(
       aggregations={
         'SALESAMOUNT':['MAX', 'MIN', 'SUM']
       },
-      order_by='ORDERDATE',
+      order_by=['ORDERDATE'],
       offsets=[-7, 7, 14],
       group_by=['PRODUCTKEY'],
   )
@@ -37,5 +37,5 @@ ds = internet_sales.rolling_agg(
 
 ## Source Code
 
-{% embed url="https://github.com/rasgointelligence/RasgoUDTs/blob/main/table_transforms/rolling_agg/rolling_agg.sql" %}
+{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/table_transforms/rolling_agg/rolling_agg.sql" %}
 

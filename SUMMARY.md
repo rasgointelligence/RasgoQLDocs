@@ -42,6 +42,7 @@
   * [Bin](transforms/column-transforms/bin.md)
   * [Cast](transforms/column-transforms/cast.md)
   * [Concat](transforms/column-transforms/concat.md)
+  * [Dateadd](transforms/column-transforms/dateadd.md)
   * [Datediff](transforms/column-transforms/datediff.md)
   * [Datepart](transforms/column-transforms/datepart.md)
   * [Datetrunc](transforms/column-transforms/datetrunc.md)

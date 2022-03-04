@@ -12,7 +12,7 @@ If you want a row-wise random sample applied, do not pass an order_by column. If
 |   Argument    |    Type     |                                                                       Description                                                                        | Is Optional |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | order_by      | column_list | Optional argument that affects the train/test split method applied. if needed, pass the names of column(s) you want to order by when applying the split. | True        |
-| train_percent | value       | Percent of the data you want in the train set, expressed as a decimal (i.e. .8). The rest of the rows will be included in the test set.                  |             |
+| train_percent | int         | Percent of the data you want in the train set, expressed as a decimal (i.e. .8). The rest of the rows will be included in the test set.                  |             |
 
 
 ## Example
@@ -30,5 +30,5 @@ ds2b.preview()
 
 ## Source Code
 
-{% embed url="https://github.com/rasgointelligence/RasgoUDTs/blob/main/column_transforms/train_test_split/train_test_split.sql" %}
+{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/column_transforms/train_test_split/train_test_split.sql" %}
 
