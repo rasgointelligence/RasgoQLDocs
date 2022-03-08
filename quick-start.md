@@ -18,6 +18,13 @@ pip install rasgoql[bigquery]
 pip install rasgotransforms --upgrade
 ```
 {% endtab %}
+
+{% tab title="Postgres" %}
+```
+pip install rasgoql[postgres]
+pip install rasgotransforms --upgrade
+```
+{% endtab %}
 {% endtabs %}
 
 ### Connect to Your Data Warehouse
@@ -63,7 +70,7 @@ rql = rasgoql.connect(creds)
 {% endtab %}
 
 {% tab title="Postgres" %}
-RasgoQL does not support Postgres yet but we plan to by the end of Q1, 2022
+Coming Soon!
 {% endtab %}
 
 {% tab title="Other" %}
