@@ -10,7 +10,7 @@ for transform_docs_file in $transform_doc_file_names; do
     md_file_name=${file_path_parts[3]}
 
     # Copy UDT Docs to gitbook repo
-    docs_file_location="./transforms/$md_file_name"
+    docs_file_location="./transforms/all-transforms/$md_file_name"
     echo "Copying UDT doc to $docs_file_location"
     cp $transform_docs_file $docs_file_location
 done
