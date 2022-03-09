@@ -5,7 +5,6 @@
 
 # Loop through transform doc file in the RasgoTransforms repo
 transform_doc_file_names=`ls ../RasgoTransforms/docs/*.md`
-echo 1
 for transform_docs_file in $transform_doc_file_names; do
     file_path_parts=(${transform_docs_file//\// })
     md_file_name=${file_path_parts[3]}
