@@ -2,6 +2,7 @@
 
 * [💡 What is RasgoQL?](README.md)
 * [🏋 Quick Start](quick-start.md)
+* [📣 RasgoQL Slack](https://join.slack.com/t/rasgousergroup/shared\_invite/zt-nytkq6np-ANEJvbUSbT2Gkvc8JICp3g)
 * [Workflows](workflows/README.md)
   * [Connecting to a DataWarehouse](workflows/connecting-to-a-datawarehouse.md)
   * [Discovering Transforms](workflows/discovering-transforms.md)

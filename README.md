@@ -1,6 +1,8 @@
 # 💡 What is RasgoQL?
 
-**RasgoQL** is an [open source package](https://github.com/rasgointelligence/RasgoQL) to help you write python, but execute SQL against your data warehouse. Currently, we only support [Snowflake & BigQuery](datawarehouses/), but we are rapidly adding support for other data warehouses.&#x20;
+**RasgoQL** is an [open source package](https://github.com/rasgointelligence/RasgoQL) to help you write python, but execute SQL against your data warehouse. Currently, and [hand-full of data warehouses](https://docs.rasgoql.com/datawarehouses) but we are rapidly working on adding support for more. \
+\
+We're still relatively new and want to hear from you. [We have a dedicated RasgoQL slack channel that you can join](https://join.slack.com/t/rasgousergroup/shared\_invite/zt-nytkq6np-ANEJvbUSbT2Gkvc8JICp3g). No need to knock, just let us know if there is a burning question on your mind or anything else you want to discuss.
 
 ![](.gitbook/assets/rasgoql\_visual.png)
 
