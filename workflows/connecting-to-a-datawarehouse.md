@@ -24,24 +24,6 @@ rasgoql.SnowflakeCredentials()
 rasgoql.BigQueryCredentials()
 ```
 {% endtab %}
-
-{% tab title="Redshift" %}
-```python
-rasgoql.RedshiftCredentials()
-```
-{% endtab %}
-
-{% tab title="Postgres" %}
-```python
-rasgoql.PostgresCredentials()
-```
-{% endtab %}
-
-{% tab title="MySQL" %}
-```python
-rasgoql.MySQLCredentials()
-```
-{% endtab %}
 {% endtabs %}
 
 Credentials can be dynamically created in each session or saved to a file for future sessions.
@@ -93,44 +75,6 @@ creds = rasgoql.BigQueryCredentials(
   json_filepath='',
   project='',
   dataset=''
-)
-```
-{% endtab %}
-
-{% tab title="Redshift" %}
-```python
-creds = rasgoql.RedshiftCredentials(
-  username='',
-  password='',
-  host='',
-  port='',
-  database='',
-  schema='',
-  ...
-)
-```
-{% endtab %}
-
-{% tab title="Postgres" %}
-```python
-creds = rasgoql.PostgresCredentials(
-  username='',
-  password='',
-  host='',
-  port='',
-  database='',
-  schema=''
-)
-```
-{% endtab %}
-
-{% tab title="MySQL" %}
-```python
-creds = rasgoql.MySQLCredentials(
-  username='',
-  password='',
-  host='',
-  database=''
 )
 ```
 {% endtab %}
