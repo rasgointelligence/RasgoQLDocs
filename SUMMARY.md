@@ -18,6 +18,8 @@
 * [Data Warehouses](datawarehouses/README.md)
   * [Snowflake](datawarehouses/credentials.md)
   * [BigQuery](datawarehouses/bigquery.md)
+  * [Postgres](datawarehouses/postgres.md)
+  * [MySQL](datawarehouses/mysql.md)
   * [Handling Credentials](datawarehouses/handling-credentials.md)
 * [RasgoQL Functions](rasgoql-class/README.md)
   * [Pre-Connection](rasgoql-class/pre-connection/README.md)
