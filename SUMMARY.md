@@ -18,6 +18,7 @@
 * [Data Warehouses](datawarehouses/README.md)
   * [Snowflake](datawarehouses/credentials.md)
   * [BigQuery](datawarehouses/bigquery.md)
+  * [Redshift](datawarehouses/credentials-1.md)
   * [Postgres](datawarehouses/postgres.md)
   * [MySQL](datawarehouses/mysql.md)
   * [Handling Credentials](datawarehouses/handling-credentials.md)

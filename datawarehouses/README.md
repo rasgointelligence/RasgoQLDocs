@@ -8,14 +8,11 @@ RasgoQL is built to run on your existing Data Warehouse. The benefits of this de
 
 ### Supported Data Warehouses
 
-At Launch (Feb 2022):
-
 * Snowflake
 * BigQuery
-
-Planned for release in Q1 2022:
-
+* Redshift
 * Postgres
+* MySQL
 
 To request support for a specific Data Warehouse drop a comment in the Rasgo [slack channel](https://join.slack.com/t/rasgousergroup/shared\_invite/zt-nytkq6np-ANEJvbUSbT2Gkvc8JICp3g).
 
