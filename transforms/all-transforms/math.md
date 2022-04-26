@@ -4,10 +4,6 @@
 
 Calculate one or more new columns using math functions.
 
-Examples of Valid Functions:
-  - [Basic Arithmetic](https://docs.snowflake.com/en/sql-reference/operators-arithmetic.html#list-of-arithmetic-operators)
-  - [Numeric Functions](https://docs.snowflake.com/en/sql-reference/functions-numeric.html)
-
 
 ## Parameters
 
