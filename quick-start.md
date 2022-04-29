@@ -7,21 +7,35 @@ From your CLI or jupyter notebook, install the package from pypi:
 {% tabs %}
 {% tab title="Snowflake" %}
 ```python
-pip install rasgoql[snowflake]
+pip install "rasgoql[snowflake]"
 pip install rasgotransforms --upgrade
 ```
 {% endtab %}
 
 {% tab title="BigQuery" %}
 ```python
-pip install rasgoql[bigquery]
+pip install "rasgoql[bigquery]"
+pip install rasgotransforms --upgrade
+```
+{% endtab %}
+
+{% tab title="Redshift" %}
+```
+pip install "rasgoql[redshift]"
 pip install rasgotransforms --upgrade
 ```
 {% endtab %}
 
 {% tab title="Postgres" %}
 ```
-pip install rasgoql[postgres]
+pip install "rasgoql[postgres]"
+pip install rasgotransforms --upgrade
+```
+{% endtab %}
+
+{% tab title="MySQL" %}
+```
+pip install "rasgoql[mysql]"
 pip install rasgotransforms --upgrade
 ```
 {% endtab %}
@@ -69,12 +83,59 @@ rql = rasgoql.connect(creds)
 ```
 {% endtab %}
 
-{% tab title="Postgres" %}
-Coming Soon!
+{% tab title="Redshift" %}
+```python
+import rasgoql
+
+# Fill in your own data warehouse credentials
+creds = rasgoql.RedshiftCredentials(
+    username="...",
+    password="...",
+    host="...",
+    port="...",
+    database="...",
+    schema="..."
+)
+
+# Connect to your Data Warehouse
+rql = rasgoql.connect(creds)
+```
 {% endtab %}
 
-{% tab title="Other" %}
-Support for more data warehouses is coming soon! Refer to our roadmap for more info.
+{% tab title="Postgres" %}
+```python
+import rasgoql
+
+# Fill in your own data warehouse credentials
+creds = rasgoql.PostgresCredentials(
+    username="...",
+    password="...",
+    host="...",
+    port="...",
+    database="...",
+    schema="..."
+)
+
+# Connect to your Data Warehouse
+rql = rasgoql.connect(creds)
+```
+{% endtab %}
+
+{% tab title="MySQL" %}
+```python
+import rasgoql
+
+# Fill in your own data warehouse credentials
+creds = rasgoql.MySQLCredentials(
+    username="...",
+    password="...",
+    host="...",
+    database="..."
+)
+
+# Connect to your Data Warehouse
+rql = rasgoql.connect(creds)
+```
 {% endtab %}
 {% endtabs %}
 
