@@ -17,13 +17,11 @@ A few of the most common use cases for RasgoQL transforms are:
 * Imputing, pivoting, and binning data
 * Aggregating and lagging data for forecasting
 
-#### Transform Categories
+#### All RQL Transforms
 
-All of the transforms provided by RasgoQL fall into one of three categories. Use the links below to explore the library of pre-defined transforms, or use them as a starting point to create your own.
+Use the link below to explore the library of pre-defined transforms, or use them as a starting point to create your own.
 
-* [Column Transforms](../transforms/column-transforms/)
-* [Row Transforms](../transforms/row-transforms/)
-* [Table Transforms](../transforms/table-transforms/)
+* [All Transforms](../transforms/all-transforms/)
 
 Properties
 
