@@ -13,7 +13,7 @@ and all data that does not fall into one of those intervals is excluded.
 
 ## Parameters
 
-|    Argument     |    Type     |                                                                                                                                                 Description                                                                                                                                                 | Is Optional |
+|      Name       |    Type     |                                                                                                                                                 Description                                                                                                                                                 | Is Optional |
 | --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | group_by        | column_list | The column(s) used to partition you data into groups. A datespine will be calculated for each group.                                                                                                                                                                                                        |             |
 | date_col        | column      | The column used to create intervals. This must be a datetime column.                                                                                                                                                                                                                                        |             |
@@ -56,5 +56,5 @@ ds2.preview()
 
 ## Source Code
 
-{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/datespine_groups/datespine_groups.sql" %}
+{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/datespine_groups/snowflake/datespine_groups.sql" %}
 

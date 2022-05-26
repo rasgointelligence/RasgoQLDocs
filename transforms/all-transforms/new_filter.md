@@ -2,10 +2,7 @@
 
 # filter
 
-Filter the dataset. Supports two types of filters:
-  1. Comparison filters, which compare the values in a column with a value
-  2. Advanced filters, which support full SQL strings for custom filtering logic
-
+Apply one or more column filters to the dataset
 
 ## Parameters
 
@@ -30,5 +27,5 @@ ds3.preview()
 
 ## Source Code
 
-{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/filter/filter.sql" %}
+{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/new_filter/new_filter.sql" %}
 

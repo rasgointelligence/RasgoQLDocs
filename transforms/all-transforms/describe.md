@@ -9,9 +9,9 @@ Other: DTYPE, COUNT, NULL_COUNT, UNIQUE_COUNT, MOST_FREQUENT, MIN, MAX
 
 ## Parameters
 
-| Argument | Type |                Description                 | Is Optional |
-| -------- | ---- | ------------------------------------------ | ----------- |
-| none     | none | this transform does not take any arguments |             |
+| Name | Type |                Description                 | Is Optional |
+| ---- | ---- | ------------------------------------------ | ----------- |
+| none | none | this transform does not take any arguments |             |
 
 
 ## Example
@@ -24,5 +24,5 @@ ds.describe().to_df()
 
 ## Source Code
 
-{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/describe/describe.sql" %}
+{% embed url="https://github.com/rasgointelligence/RasgoTransforms/blob/main/rasgotransforms/rasgotransforms/transforms/describe/snowflake/describe.sql" %}
 
